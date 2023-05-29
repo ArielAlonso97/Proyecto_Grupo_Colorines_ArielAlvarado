@@ -1,0 +1,23 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <!--<th>Apellido</th>-->
+        <th>Contraseña</th>
+        <th>ID de Rol</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.Id }}</td>
+        <td>{{ usuario.Nombre }}</td>
+        <!--<td>{{ usuario.Apellido }}</td>-->
+        <td>{{ usuario.Contrasena }}</td>
+        <td>{{ usuario.IdRol }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  

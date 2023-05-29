@@ -1,0 +1,37 @@
+
+<table>
+    <thead>
+      <tr>
+        <th>nombre</th>
+        <th>descripcion</th>
+        <th>imagen</th>
+        <th>precio</th>
+        <th>existencia</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td><img src="{{ producto.imagen }}" width="50px" height="50px" /></td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.existencia }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+
+      <form>
+        <input placeholder="Nuevo nombre" type="text" required>
+        <input placeholder="Nueva descripcion" type="text">
+        <input placeholder="Nueva imagen" type="file" (change)="getBase64($event)">
+        <input placeholder="Nuevo precio" type="number" required>
+        <input placeholder="existencia" type="number" required>
+        <button>Comfirmar</button>
+        <button>Cancelar</button>
+      </form>
+    
+    
+ 

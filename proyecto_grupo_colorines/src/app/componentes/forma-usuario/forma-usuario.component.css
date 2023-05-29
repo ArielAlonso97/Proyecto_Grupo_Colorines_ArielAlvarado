@@ -1,0 +1,24 @@
+
+input{
+    
+    text-align: center;
+    margin-top: 10%;
+    align-items: center;
+    border-radius: 50px;
+    align-items: center;
+    line-height: 20px;
+    border: none;
+    min-width: 50%;
+    padding: 3%;
+    font-size: 2vw;
+    background-color: #FFFFFF;
+    border: #830144 solid 4px;
+}
+
+
+@media only screen and (max-width: 921px) {
+    input{
+        font-size: 5vw;
+        
+    }
+  }

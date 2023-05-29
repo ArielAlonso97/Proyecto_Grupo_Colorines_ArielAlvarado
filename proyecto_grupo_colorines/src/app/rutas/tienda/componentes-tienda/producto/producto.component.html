@@ -1,0 +1,14 @@
+<div class="contenedor">
+    <div class="imagen" [style.background-image]="'url(' + imageProducto + ')'"></div>
+    <div class="descripcion-producto">
+        <h1>{{nombre_producto}}</h1>
+        <h2>{{precio}}</h2>
+        <p>{{descripcion}}</p>
+        <h3>En existencia {{existencia}}</h3>
+        <button class="restar" (click)="restarCantidad()">-</button>
+        <button class="sumar" (click)="aumentarCantidad()">+</button>
+        <div class="cantidad">Agregar {{cantidad}} </div>
+        <button class="agregar" (click)="agregarCarrito()" (click)="resetearCantidad()" >Agregar al carrito</button>
+    </div>
+
+</div>

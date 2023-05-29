@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <div class="header-regreso">
+    <app-boton-regresar class="back-arrow"></app-boton-regresar>
+    <h1>Registro</h1>
+  </div>
+  <form (submit)="registrarUsuario()">
+    <input placeholder="Nombre" class="formulario" [(ngModel)]="model.nombre" name="nombre" required>
+    <input placeholder="Apellido" class="formulario" [(ngModel)]="model.apellido" name="apellido" required>
+    <input placeholder="Usuario" class="formulario" [(ngModel)]="model.nombreUsuario" name="nombreUsuario" required>
+    <input placeholder="Correo" class="formulario" [(ngModel)]="model.correoElectronico" name="correoElectronico" required>
+    <input type="password" placeholder="Contraseña" class="formulario" [(ngModel)]="model.contrasena" name="contrasena" required>
+    <input type="password" placeholder="Confirmar Contraseña" class="formulario" [(ngModel)]="model.contrasenaConfirmacion" name="contrasenaConfirmacion" required>
+    <div class="contenedor-boton-registrar">
+      <button type="submit" class="boton-registrar">Registrar</button>
+    </div>
+  </form>
+</div>

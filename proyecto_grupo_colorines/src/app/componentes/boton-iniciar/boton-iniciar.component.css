@@ -1,0 +1,32 @@
+button{
+    margin: 0;
+    border-radius: 0px 40px 40px 0px;
+    width: 300px;
+    border: none;
+    height: 70px;
+    background-color: #FE0084;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px 0px #52012b;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    font-size: 2vw;    
+    
+    
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 0px 0px #fc7cc4;
+  }
+
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 0px 0px #fc7cc4;
+    color: #950355;
+  }
+
+  @media only screen and (max-width: 921px) {
+    button{
+      font-size: 5vw;
+    }
+  }

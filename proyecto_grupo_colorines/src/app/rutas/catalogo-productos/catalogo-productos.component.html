@@ -1,0 +1,31 @@
+<table>
+    <thead>
+      <tr>
+        <th>nombre</th>
+        <th>descripcion</th>
+        <th>imagen</th>
+        <th>precio</th>
+        <th>existencia</th>
+        <th>estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td><img src="{{ producto.imagen }}" width="50px" height="50px" /></td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.existencia }}</td>
+        <td>{{ producto.activo == 1 ? 'Activo' : 'Inactivo'}}</td>
+        <td>
+          <button (click)="editar(producto.id)">Editar</button> 
+          <button (click)="cambiarEstado(producto.id)">{{producto.activo == 1 ? 'Inactivar' : 'Activar'}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-creacion-productos></app-creacion-productos>
+  <app-edicion-productos></app-edicion-productos>
+  

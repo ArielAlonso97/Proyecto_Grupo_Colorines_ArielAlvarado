@@ -1,0 +1,19 @@
+img{
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+    border: solid 3px #fc7cc4;
+    padding: 2%;
+    border-radius: 50%;
+}
+
+img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 0px 0px #fc7cc4;
+}
+
+img:active{
+    transform: translateY(2px);
+    box-shadow: 0px 3px 0px 0px #fc7cc4;
+    color: #950355;
+}

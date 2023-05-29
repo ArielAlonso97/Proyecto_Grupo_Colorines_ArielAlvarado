@@ -1,0 +1,20 @@
+<body>
+    <div class="contenedor">
+        <div class="contenedor-logo">
+            <img id="logo" src="../assets/imagenes/descarga.png" alt="logo">
+        </div>
+        <header>
+            <h1 class="login">Login</h1>
+        </header>
+        <form class="contenedor-principal" (submit)="login()">
+            <input class="input" name="nombreUsuario" [(ngModel)]="nombreUsuario" placeholder="Usuario">
+            <input class="input" name="contrasena" [(ngModel)]="contrasena" type="password" placeholder="Contraseña">
+            <div class="botones">
+              <app-boton-registro ></app-boton-registro>
+              <button type="submit" class="app-boton-iniciar">Iniciar sesión</button>
+            </div>
+          </form>
+
+    </div>
+
+</body>
