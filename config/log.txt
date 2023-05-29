@@ -1,0 +1,313 @@
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombre] => Ariel
+    [apellido] => Alonso
+    [nombreUsuario] => Ariel
+    [correoElectronico] => ariel32_124@hotmail.com
+    [contrasena] => hola
+    [contrasenaConfirmacion] => hola
+)
+Datos recibidos:
+Nombre: 
+Apellido: 
+Nombre de usuario: 
+Correo electrónico: 
+Contraseña: 
+Confirmación de contraseña: 
+
+Datos recibidos:
+Nombre: 
+Apellido: 
+Nombre de usuario: 
+Correo electrónico: 
+Contraseña: 
+Confirmación de contraseña: 
+
+stdClass Object
+(
+    [nombre] => Ariel
+    [apellido] => Alonso
+    [nombreUsuario] => Ariel
+    [correoElectronico] => ariel32_124@hotmail.com
+    [contrasena] => hola
+    [contrasenaConfirmacion] => adios
+)
+stdClass Object
+(
+    [nombre] => Ariel
+    [apellido] => Alonso
+    [nombreUsuario] => Ariel
+    [correoElectronico] => ariel32_124@hotmail.com
+    [contrasena] => hola
+    [contrasenaConfirmacion] => adios
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => sdsfsdf
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => sdfsd
+    [contrasena] => sdf
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => hola
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => $2y$10$SQfCV1A45MRP1
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => $2y$10$o/.y5HTBwUJx3
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => wdfsdf
+    [contrasena] => sdfsdf
+)
+stdClass Object
+(
+    [nombreUsuario] => wdfsdf
+    [contrasena] => sdfsdf
+)
+stdClass Object
+(
+    [nombreUsuario] => wdfsdf
+    [contrasena] => sdfsdf
+)
+stdClass Object
+(
+    [nombreUsuario] => wdfsdf
+    [contrasena] => sdfsdf
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => hola
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => WEFSD
+    [contrasena] => SDFSDF
+)
+stdClass Object
+(
+    [nombreUsuario] => WEFSD
+    [contrasena] => SDFSDF
+)
+stdClass Object
+(
+    [nombreUsuario] => WEFSD
+    [contrasena] => SDFSDF
+)
+stdClass Object
+(
+    [nombreUsuario] => WEFSD
+    [contrasena] => SDFSDF
+)
+stdClass Object
+(
+    [nombreUsuario] => WEFSD
+    [contrasena] => SDFSDF
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
