@@ -2,21 +2,16 @@
 
     <button class="cerrar-sesion" (click)="irARutaDestino()">Cerrar sesion</button>
     <div class="nav-right">
-        <button (click)="irARutaDestino_catalogo()"  class="catalogo">Catalogo de usuarios</button>
-
+        <button (click)="irARutaDestino_catalogo_usuarios()"  class="catalogo">Catalogo de usuarios</button>
+        <button (click)="irARutaDestino_catalogo_productos()"  class="catalogo_productos">Catalogo de productos</button>
+        <button  (click)="irARutaDestino_carrito()"  class="carrito">Carrito <img src="../assets/imagenes/shopping-cart.png" width="50px"/></button>
     </div>
-
-
+    
 </nav>
 <div class="productos">
-    <div class="producto">
-        <app-producto [imageProducto]="productos_tienda.producto1.imagen"
-            [nombre_producto]="productos_tienda.producto1.nombre" [descripcion]="productos_tienda.producto1.descripcion"
-            [existencia]="productos_tienda.producto1.cantidad"
-            [precio]="productos_tienda.producto1.precio"></app-producto>
+    <div class="producto" *ngFor="let producto of productos">
+        <app-producto [producto]="producto" (updateEvent)="actualizarCarrito()"></app-producto>
     </div>
 
-    <div class="carrito">
-        <app-carrito></app-carrito>
-    </div>
+    
 </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { RegistroUsuario } from 'src/app/models/registro-usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -11,7 +12,7 @@ import { RegistroUsuario } from 'src/app/models/registro-usuario';
 export class RegistroComponent {
   model: RegistroUsuario = new RegistroUsuario();
 
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar,private router: Router) {}
 
   registrarUsuario() {
     console.log('Valores del formulario:');    
@@ -60,7 +61,9 @@ export class RegistroComponent {
       },
     });
   }
-  
+  irARutaDestino() {
+    this.router.navigate(["../"]); 
+  }
   
   
 }

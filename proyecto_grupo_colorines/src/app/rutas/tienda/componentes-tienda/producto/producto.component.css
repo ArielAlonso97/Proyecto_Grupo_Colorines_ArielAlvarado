@@ -3,7 +3,7 @@
     width: 100%;
     grid-template-columns: 40% 60%;
     background-color: white;
-    border-radius: 0px 70px 70px 0px;
+    border-radius: 70px 70px 70px 70px;
     color: #3b3b3b;
     box-shadow: 3px 3px 6px gray;
 }
@@ -17,6 +17,7 @@
     background-color: white;
     margin-right: 5%;
     border-radius: 70px;
+    min-width: 50%;
 }
 
 .imagen{
@@ -49,11 +50,14 @@ button{
 }
 
 .agregar{
-    width: 60%;
+    width: 100%;
     border-radius: 0px 0px 40px 40px;
+    padding: 3%;
     
 }
-
+.restar,.sumar{
+    width: 30%;
+}
 .restar{
     background-color: #950355;
     border-radius: 40px 0px 0px 40px;

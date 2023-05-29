@@ -11,7 +11,5 @@ export class BotonRegresarComponent {
   regresando(){
     console.log("regresando...")
   }
-  irARutaDestino() {
-    this.router.navigate(["../../"]); 
-  }
+  
 }

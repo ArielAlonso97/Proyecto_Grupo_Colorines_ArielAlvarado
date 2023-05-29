@@ -1,8 +1,5 @@
 <?php
 // Conexión a la base de datos
-header("Access-Control-Allow-Origin: http://localhost:4200");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
 
 $servername = "localhost";
 $username = "root";
@@ -14,7 +11,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$id = isset($_POST['id']) ? $_POST['id'] : '';
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 
 // Consultar todos los Productos
 $sql = "SELECT * FROM Productos WHERE Id = $id";
@@ -36,7 +33,7 @@ if ($result->num_rows > 0) {
     }
 }
 
-echo json_encode($productos);
+echo json_encode($producto);
 
 $conn->close();
 ?>

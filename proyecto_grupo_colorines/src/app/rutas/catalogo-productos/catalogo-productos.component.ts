@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalogo-productos',
@@ -12,7 +13,7 @@ export class CatalogoProductosComponent implements OnInit {
   productos: Producto[] = [];
   subscription: Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router: Router) {}
 
   ngOnInit() {
     const url = 'http://localhost/punto_de_venta/config/consultaProductos.php';
@@ -33,8 +34,8 @@ export class CatalogoProductosComponent implements OnInit {
     }
   }
 
-  editar(id: number){
-    window.location.href = 'editar-producto/' + id;
+  editar(id: number) {
+    this.router.navigate(['/edicion-producto', id]);
   }
 
   cambiarEstado(id: number){
@@ -53,5 +54,7 @@ export class CatalogoProductosComponent implements OnInit {
       }
     });
   }
-
+  irARutaDestino() {
+    this.router.navigate(["/tienda"]); 
+  }
 }

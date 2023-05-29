@@ -1,9 +1,9 @@
 <div class="contenedor">
   <div class="header-regreso">
-    <app-boton-regresar class="back-arrow"></app-boton-regresar>
+    <app-boton-regresar class="back-arrow" (click)="irARutaDestino()"></app-boton-regresar>
     <h1>Registro</h1>
   </div>
-  <form (submit)="registrarUsuario()">
+  <form class="contenedor-formulario" (submit)="registrarUsuario()" >
     <input placeholder="Nombre" class="formulario" [(ngModel)]="model.nombre" name="nombre" required>
     <input placeholder="Apellido" class="formulario" [(ngModel)]="model.apellido" name="apellido" required>
     <input placeholder="Usuario" class="formulario" [(ngModel)]="model.nombreUsuario" name="nombreUsuario" required>

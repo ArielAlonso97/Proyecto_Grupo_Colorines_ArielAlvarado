@@ -1,26 +1,30 @@
-<h2>Crear Producto</h2>
-<form (ngSubmit)="crearProducto()">
-  <div>
-    <label>Nombre:</label>
-    <input [(ngModel)]="nuevoProducto.nombre" name="nombre" required>
-  </div>
-  <div>
-    <label>Descripción:</label>
-    <input [(ngModel)]="nuevoProducto.descripcion" name="descripcion" required>
-  </div>
-  <div>
-    <label>Imagen:</label>
-    <input [(ngModel)]="nuevoProducto.imagen" name="imagen" required type="file" (change)="getBase64($event)">
-  </div>
-  <div>
-    <label>Precio:</label>
-    <input [(ngModel)]="nuevoProducto.precio" name="precio" required>
-  </div>
-  <div>
-    <label>Existencia:</label>
-    <input [(ngModel)]="nuevoProducto.existencia" name="existencia" required>
-  </div>
-  <button type="submit">Crear Producto</button>
-</form>
+<div class="contenedor">
+  <h2>Crear Producto</h2>
+  <form (ngSubmit)="crearProducto()">
+    <div>
 
-<hr>
+      <input placeholder="Nombre" [(ngModel)]="nuevoProducto.nombre" name="nombre" required>
+    </div>
+    <div>
+
+      <input placeholder="Descripción" [(ngModel)]="nuevoProducto.descripcion" name="descripcion" required>
+    </div>
+
+    <div>
+
+      <input placeholder="Precio" [(ngModel)]="nuevoProducto.precio" name="precio" required>
+    </div>
+    <div>
+
+      <input placeholder="Existencia" [(ngModel)]="nuevoProducto.existencia" name="existencia" required>
+    </div>
+    <div>
+
+      <input placeholder="Imagen" [(ngModel)]="nuevoProducto.imagen" name="imagen" required type="file"
+        (change)="getBase64($event)">
+    </div>
+    <button type="submit">Crear Producto</button>
+  </form>
+
+  <hr>
+</div>

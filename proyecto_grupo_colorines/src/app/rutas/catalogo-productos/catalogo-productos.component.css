@@ -1,0 +1,51 @@
+.contenedor{
+    background-color: white;
+    border-radius: 40px;
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: #830144;
+    padding: 2%;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+    column-gap: 3%;
+}
+.boton-regreso{
+    height: 50px;
+    margin:4%;
+}
+.Productos-tabla{
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 40px;
+    padding: 2%;
+    
+}
+
+.Productos-creacion{
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 40px;
+}
+
+.nav-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    color: white;
+    text-transform: capitalize;
+    font-size: 3vw;
+}
+
+th{
+   color: #830144;
+   text-transform: capitalize;
+}

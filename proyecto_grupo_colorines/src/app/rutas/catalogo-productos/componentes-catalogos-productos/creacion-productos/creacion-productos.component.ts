@@ -4,7 +4,7 @@ import { Producto } from 'src/app/models/producto';
 import { Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { RegistroProducto } from 'src/app/models/registro-producto';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-creacion-productos',
@@ -16,7 +16,10 @@ export class CreacionProductosComponent implements OnInit {
   nuevoProducto: RegistroProducto = new RegistroProducto(); // Nuevo producto a crear
   private productosSubscription: Subscription | undefined;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router: Router) {}
+  irARutaDestino() {
+    this.router.navigate(["/tienda"]); 
+  }
 
   ngOnInit() {
     this.obtenerProductos();
@@ -57,9 +60,12 @@ export class CreacionProductosComponent implements OnInit {
         console.log('Producto creado exitosamente');
         this.obtenerProductos(); // Actualizar la lista de productos
         this.nuevoProducto = new RegistroProducto(); // Limpiar los campos del formulario
+        alert("El producto se creo correctamente...");
+        this.irARutaDestino()
       },
       error: (error) => {
         console.log('Error al crear el producto:', error);
+        alert("El producto no se creo correctamente...");
       }
     });
   }

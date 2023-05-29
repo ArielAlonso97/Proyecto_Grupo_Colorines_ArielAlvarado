@@ -1,9 +1,7 @@
 img{
-    width: 15%;
-    height: auto;
+    height: 100%;
     cursor: pointer;
     border: solid 3px #fc7cc4;
-    padding: 2%;
     border-radius: 50%;
 }
 

@@ -1,19 +1,29 @@
-<div class="contenedor-tabla">
-    <div class="carrito-header">
-        <h1>Carrito</h1>
-        <img src="../../../../../../assets/imagenes/shopping-cart.png" />
+
+<div class="contenedor-tabla" *ngIf="productos.length>0">
+    <div class="nav">
+        <div class="back-arrow">
+            <app-boton-regresar (click)="irARutaDestino()"></app-boton-regresar>
+        </div>
+        <div class="carrito-header">
+            <h1>Carrito</h1>
+            <img src="assets/imagenes/shopping-cart.png" />
+        </div>
     </div>
+    
+
+
     <table>
         <tr>
             <th>Producto </th>
             <th>Precio </th>
             <th>cantidad </th>
         </tr>
-        <tr>
-            <td>Audifonos</td>
-            <td>$ 800</td>
-            <td>1</td>
-            <button>x</button>
+        <tr *ngFor="let producto of productos">
+            <td placehoder="hola">{{producto.nombre}}</td>
+            <td>${{producto.precio}}</td>
+            <td>{{producto.cantidad}}</td>
+            <button (click)="eliminarProducto(producto)">x</button>
         </tr>
     </table>
+    <button>Comprar</button>
 </div>

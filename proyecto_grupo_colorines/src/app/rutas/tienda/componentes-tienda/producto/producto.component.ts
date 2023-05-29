@@ -1,4 +1,7 @@
-import { Component,Input  } from '@angular/core';
+import { Component, Input, EventEmitter, Output  } from '@angular/core';
+import { Carrito } from 'src/app/models/carrito';
+import { Producto } from 'src/app/models/producto';
+import { ProductoCarrito } from 'src/app/models/producto-carrito';
 
 
 @Component({
@@ -7,11 +10,8 @@ import { Component,Input  } from '@angular/core';
   styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent {
-  @Input() imageProducto: string = "";
-  @Input() nombre_producto: string = "";
-  @Input() descripcion: string = "";
-  @Input() precio: number = 0;
-  @Input() existencia: number = 0;
+  @Output() updateEvent = new EventEmitter<string>();
+  @Input() producto: Producto = new Producto();
   cantidad: number = 0;
 
   aumentarCantidad = () => {
@@ -28,18 +28,13 @@ export class ProductoComponent {
     }
     
   }
-  agregarCarrito = () => {
-    console.log("agregando a carrito...")
-  }
-  resetearCantidad = () =>{
+  agregarCarrito = (data:Producto) => {
+    let producto = data as ProductoCarrito;
+    producto.cantidad = this.cantidad;
+    Carrito.agregar(producto);
     this.cantidad = 0;
+    this.updateEvent.emit();
   }
-  
-
-  
-  
-  
-  
 }
 
 

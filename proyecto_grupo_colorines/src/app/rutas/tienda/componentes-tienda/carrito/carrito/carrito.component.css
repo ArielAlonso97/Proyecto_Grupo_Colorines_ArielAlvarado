@@ -1,17 +1,21 @@
 .contenedor-tabla{
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
     text-align: center;
-    width: 100%;
+    width: 80%;
     background-color: white;
-    border-radius: 70px 0px 0px 70px;
+    border-radius: 70px 70px 70px 70px;
     color: #3b3b3b;
     box-shadow: 3px 3px 6px gray;
     min-height: 300px;
-    padding-top: 10%;
+    padding: 4%;
     
 }
 table{
    
     margin: auto;
+    margin-top: 4%;
 }
 .carrito-header{
     display: flex;
@@ -19,12 +23,26 @@ table{
     justify-content: center;
 }
 h1{
-    color: #830144;
+    color: white;
 }
 
 img{
     height: 40px;
 }
+.back-arrow{
+    height: 50px;
+}
 tr{
+    justify-content: space-between;
+}
+
+.nav{
+    border-radius: 70px 70px 70px 70px;
+    background-color: #830144;
+    height: 100px;
+    width: 90%;
+    display: flex;
+    padding: 4%;
+    align-items: center;
     justify-content: space-between;
 }

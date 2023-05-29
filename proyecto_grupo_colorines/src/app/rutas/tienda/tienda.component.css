@@ -4,14 +4,16 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #830144;
+    padding-bottom: 5%;
     
 }
 
 .nav-right {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -21,7 +23,6 @@ nav {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
     justify-content: space-around;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -30,15 +31,13 @@ nav {
 .producto {
     height: 30%;
     width: 60%;
-    
-}
-.carrito{
-    
-    width: 30%;
+    margin-top: 5%;
 }
 
+
 button {
-    padding: 1%;
+    height: 40%;
+    width: 30%;
     margin: 1%;
     border-radius: 0px 40px 40px 0px;
     background-color: #FE0084;
@@ -48,6 +47,9 @@ button {
     color: white;
     font-size: .9vw;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {
@@ -62,9 +64,20 @@ button:active {
 }
 .cerrar-sesion{
     border-radius: 40px 0px 0px 40px;
+    height: 100px;
+    font-size: 2vw;
 }
 
 .catalogo {
-    border-radius: 0px 40px 40px 0px;
+    border-radius: 40px 0px 0px 40px;
+    
 }
-
+.productos{
+    border-radius: 0px 40px 40px 0px;
+    text-align: center;
+}
+.carrito{
+    border-radius: 0px 0px 40px 40px;
+    width: 70%;
+    height: 50%;
+}

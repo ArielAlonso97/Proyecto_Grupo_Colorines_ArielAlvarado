@@ -311,3 +311,103 @@ stdClass Object
     [nombreUsuario] => Ariel
     [contrasena] => 123
 )
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)
+stdClass Object
+(
+    [nombreUsuario] => 
+    [contrasena] => 
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Ariel
+    [contrasena] => 123
+)
+stdClass Object
+(
+    [nombreUsuario] => Admin
+    [contrasena] => Admin123.
+)

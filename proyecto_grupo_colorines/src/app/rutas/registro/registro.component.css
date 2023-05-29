@@ -1,37 +1,42 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-.contenedor{
+
+.contenedor {
     margin: auto;
     padding: 0%;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
-    
+    justify-content: center;
+    margin-bottom: 10%;
 }
-.contenedor-menu{
+
+.contenedor-menu {
     display: flex;
     justify-content: center;
 }
 
-.header-regreso{
-    margin-top: 2%;
+.header-regreso {
+    height: 10%;
     width: 90%;
     display: flex;
     justify-content: space-around;
     background-color: #830144;
-    padding-top: 2%;
-    padding-bottom: 2%;
     align-items: center;
     border-radius: 0px 90px 90px 0px;
-    
-
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 3%;
+    margin-left: -10%;
 }
-h1{
+
+h1 {
     color: white;
 }
-.contenedor-formulario{
+
+.contenedor-formulario {
     justify-content: center;
     border-radius: 50px;
     width: 80%;
@@ -39,14 +44,15 @@ h1{
     display: flex;
     flex-wrap: wrap;
     box-shadow: 3px 3px 6px gray;
-    
+
 }
-.formulario{
+
+.formulario {
     margin-bottom: 4%;
 }
 
-input{
-    
+input {
+
     border-radius: 50px;
     min-width: 30%;
     padding: 3%;
@@ -55,14 +61,14 @@ input{
     border: #830144 solid 4px;
 }
 
-.formulario-registro{
+.formulario-registro {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.contenedor-boton-registrar{
+.contenedor-boton-registrar {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -70,6 +76,39 @@ input{
 }
 
 
-.boton-registrar{
+.boton-registrar {
     width: 30%;
+    margin: 0;
+    border-radius: 40px 0px 40px 0px;
+    width: 300px;
+    border: none;
+    height: 70px;
+    background-color: #FE0084;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px 0px #52012b;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    font-size: 2vw;
+}
+
+.boton-registrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 0px 0px #fc7cc4;
+}
+
+.boton-registrar:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 0px 0px #fc7cc4;
+    color: #950355;
+}
+
+
+.back-arrow {
+    height: 50px;
+}
+
+@media only screen and (max-width: 921px) {
+    .boton-registrar {
+        font-size: 5vw;
+    }
 }

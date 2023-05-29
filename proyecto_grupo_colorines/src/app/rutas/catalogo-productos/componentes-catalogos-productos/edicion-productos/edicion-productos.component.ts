@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { RegistroProducto } from 'src/app/models/registro-producto';
 
 @Component({
@@ -9,19 +11,29 @@ import { RegistroProducto } from 'src/app/models/registro-producto';
   templateUrl: './edicion-productos.component.html',
   styleUrls: ['./edicion-productos.component.css']
 })
-export class EdicionProductosComponent implements OnInit {
-  productos: Producto[] = [];
+export class EdicionProductosComponent implements OnInit, OnDestroy {
+  producto: RegistroProducto = new RegistroProducto();
   subscription: Subscription;
-  nuevoProducto: RegistroProducto = new RegistroProducto();
+  id: number;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute,private router: Router) {}
+
+  cancelar() {
+  this.router.navigate(['/Catalogo-productos']); // Ruta relativa sin la URL completa
+}
+
 
   ngOnInit() {
-    const url = 'http://localhost/punto_de_venta/config/consultaProductos.php';
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
 
-    this.subscription = this.http.get<Producto[]>(url).subscribe({
+    const url = 'http://localhost/punto_de_venta/config/consultaProductoPorId.php?id=' + this.id;
+    this.subscription = this.http.get<RegistroProducto>(url).subscribe({
       next: (response) => {
-        this.productos = response;
+        this.producto = response;
+        console.log(this.producto);
+        
       },
       error: (error) => {
         console.log('Error al obtener los productos:', error);
@@ -34,55 +46,40 @@ export class EdicionProductosComponent implements OnInit {
       this.subscription.unsubscribe();
     }
   }
-  
-  obtenerProductos() {
-    const url = 'http://localhost/punto_de_venta/config/consultaProductos.php';
-    this.subscription = this.http.get<Producto[]>(url).subscribe({
-      next: (response) => {
-        this.productos = response;
-      },
-      error: (error) => {
-        console.log('Error al obtener los productos:', error);
-      }
-    });
-  }
 
   modificarProducto() {
-    console.log(this.nuevoProducto);
-
     const datosRegistro = new FormData();
-    
-    datosRegistro.append('id', this.nuevoProducto.id.toString());
-    datosRegistro.append('nombre', this.nuevoProducto.nombre);
-    datosRegistro.append('descripcion', this.nuevoProducto.descripcion);
-    datosRegistro.append('imagen', this.nuevoProducto.imagenBase64);
-    datosRegistro.append('precio', this.nuevoProducto.precio.toString());
-    datosRegistro.append('existencia', this.nuevoProducto.existencia.toString());
+    datosRegistro.append('id', this.producto.id.toString());
+    datosRegistro.append('nombre', this.producto.nombre);
+    datosRegistro.append('descripcion', this.producto.descripcion);
+    datosRegistro.append('imagen', this.producto.imagenBase64 || '');
+    datosRegistro.append('precio', this.producto.precio.toString());
+    datosRegistro.append('existencia', this.producto.existencia.toString());
 
-    const url = 'http://localhost/punto_de_venta/config/crearProducto.php';
+    const url = 'http://localhost/punto_de_venta/config/actualizarProducto.php';
     this.http.post(url, datosRegistro).subscribe({
       next: () => {
-        console.log('Producto creado exitosamente');
-        this.obtenerProductos(); // Actualizar la lista de productos
-        this.nuevoProducto = new RegistroProducto(); // Limpiar los campos del formulario
+        console.log('Producto editado exitosamente');
+        this.producto = new RegistroProducto(); // Limpiar los campos del formulario
       },
       error: (error) => {
-        console.log('Error al crear el producto:', error);
+        console.log('Error al editar el producto:', error);
       }
     });
   }
   
-  getBase64(event: any) {    
+  
+  
+  getBase64(event: any, id: number) {
     console.log(event);
-    let me = this;
-    let file = event.target.files[0];
-    let reader = new FileReader();
+    const file = event.target.files[0];
+    const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = function () {
-      me.nuevoProducto.imagenBase64 = reader.result != null ? reader.result.toString() : '';
+    reader.onload = () => {
+      this.producto.imagenBase64 = reader.result != null ? reader.result.toString() : '';
       console.log(reader.result);
     };
-    reader.onerror = function (error) {
+    reader.onerror = (error) => {
       console.log('Error: ', error);
     };
   }

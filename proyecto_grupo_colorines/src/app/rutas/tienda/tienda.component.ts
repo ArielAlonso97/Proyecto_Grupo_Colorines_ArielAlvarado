@@ -1,6 +1,10 @@
-import { Component, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Productos } from './catalogos-productos/productos/productos.component';
+import { Producto } from 'src/app/models/producto';
+import { Subject, Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Carrito } from 'src/app/models/carrito';
+import { ProductoCarrito } from 'src/app/models/producto-carrito';
 
 
 @Component({
@@ -8,21 +12,49 @@ import { Productos } from './catalogos-productos/productos/productos.component';
   templateUrl: './tienda.component.html',
   styleUrls: ['./tienda.component.css']
 })
-export class TiendaComponent {
-  productos_tienda = {
-    producto1: new Productos('Audífonos', 800, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum quam at ex luctus, maximus tincidunt eros placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.', 4, '../../../../assets/imagenes/producto_1.jpg'),
-    producto2: new Productos('Otro producto', 1000, 'Descripción del otro producto', 2, '../../../../assets/imagenes/producto_2.jpg')
-  };
+export class TiendaComponent implements OnInit {
+  productos: Producto[] = [];
+  subscription: Subscription;
+  productosCarrito: ProductoCarrito[] = [];
+  resetFormSubject: Subject<boolean> = new Subject<boolean>();
 
+  constructor(private router: Router, private http: HttpClient){ }
 
-  constructor(private router: Router) { }
+  ngOnInit() {
+    this.productosCarrito = Carrito.obtener();
+    const url = 'http://localhost/punto_de_venta/config/consultaProductosActivos.php';
+
+    this.subscription = this.http.get<Producto[]>(url).subscribe({
+      next: (response) => {
+        this.productos = response;
+      },
+      error: (error) => {
+        console.log('Error al obtener los productos:', error);
+      }
+    });
+  }
+
   irARutaDestino() {
     this.router.navigate(['../../']); 
   }
-  irARutaDestino_catalogo() {
+  irARutaDestino_catalogo_usuarios() {
     this.router.navigate(['../../Catalogo-usuarios']); 
   }
-  
+  irARutaDestino_catalogo_productos() {
+    this.router.navigate(['../../Catalogo-productos']); 
+  }
+  irARutaDestino_carrito() {
+    this.router.navigate(['./carrito']); 
+  }
 
 
+  actualizarCarrito(){
+    console.log('se actualizó carrito');
+    this.productosCarrito = Carrito.obtener();
+    this.resetChildForm();
+  }
+
+  resetChildForm(){
+     this.resetFormSubject.next(true);
+  }
 }

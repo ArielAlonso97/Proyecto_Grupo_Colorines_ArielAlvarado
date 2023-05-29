@@ -1,37 +1,19 @@
-
 <table>
-    <thead>
-      <tr>
-        <th>nombre</th>
-        <th>descripcion</th>
-        <th>imagen</th>
-        <th>precio</th>
-        <th>existencia</th>
+  <tbody>
+    <tr>
+      <!-- <td><img [src]="productos[this.id-1].imagenBase64" width="50px" height="50px" /></td> -->
+      <td>
+        <form (ngSubmit)="modificarProducto()" >
+          <input [placeholder]="producto.nombre" [(ngModel)]="producto.nombre" name="nombre"type="text" required>
+          <input [placeholder]="producto.descripcion" [(ngModel)]="producto.descripcion" name="descripcion"type="text">
+          <input [placeholder]="producto.precio" [(ngModel)]="producto.precio" name="precio"type="number" required>
+          <input [placeholder]="producto.existencia" [(ngModel)]="producto.existencia" name="existencia"type="number" required>
+          <input [placeholder]="producto.imagenBase64" type="file" (change)="getBase64($event,producto.id)" name="imagen">
+          <button type="submit">Confirmar</button>
+          <button (click)="cancelar()">Cancelar</button>
+        </form>
         
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let producto of productos">
-        <td>{{ producto.nombre }}</td>
-        <td>{{ producto.descripcion }}</td>
-        <td><img src="{{ producto.imagen }}" width="50px" height="50px" /></td>
-        <td>{{ producto.precio }}</td>
-        <td>{{ producto.existencia }}</td>
-        
-      </tr>
-    </tbody>
-  </table>
-
-
-      <form>
-        <input placeholder="Nuevo nombre" type="text" required>
-        <input placeholder="Nueva descripcion" type="text">
-        <input placeholder="Nueva imagen" type="file" (change)="getBase64($event)">
-        <input placeholder="Nuevo precio" type="number" required>
-        <input placeholder="existencia" type="number" required>
-        <button>Comfirmar</button>
-        <button>Cancelar</button>
-      </form>
-    
-    
- 
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -31,13 +31,16 @@ import { EdicionProductosComponent } from './rutas/catalogo-productos/componente
 
 
 
+
+
 const appRoutes : Routes = [
   {path:'',component:LoginComponent},
   {path:'registro', component:RegistroComponent},
   {path:'tienda', component:TiendaComponent},
   {path:'Catalogo-productos', component:CatalogoProductosComponent},
   {path:'Catalogo-usuarios', component:CatalogoUsuariosComponent},
-  {path:'edicion-producto',component:EdicionProductosComponent}
+  { path: 'edicion-producto/:id', component: EdicionProductosComponent},
+  { path:'carrito',component:CarritoComponent}
 
 
 ];
